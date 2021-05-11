@@ -1,0 +1,149 @@
+/*---------- Sass Variabler --------- */
+$primary_black: #252525;
+$primary_red: #af0404;
+$primary_white: #ffffff;
+$primary_gold: #cda46b;
+/*---- */
+$secondary_black: #121212;
+$secondary_red: #74071e;
+$secondary_white: #fefffe;
+$secondary_goldt: #bf8c53;
+/*---- */
+$tone_lightgray: #ededed;
+$tone_gray: #707070;
+$tone_darkgray: #414141;
+$tone_black: #000000;
+/*----------------------------------- */
+/*------------ fonts -------------- */
+$secondary_font:'Playfair Display', serif;
+$primary_font:'Abel', sans-serif;
+/*----------------------------------- */
+/*------------ general -------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: $secondary_font;
+    font-weight: 700;
+    font-size: 90px;
+}
+
+h2{
+    font-family: $secondary_font;
+    font-size: 50px;
+}
+
+h3{
+    font-family: $secondary_font;
+    font-size: 40px;
+}
+
+h4{
+    font-family: $secondary_font;
+    font-size: 30px;
+}
+
+h5{
+    font-family: $secondary_font;
+    font-size: 25px;
+}
+
+h6{
+    font-family: $secondary_font;
+    font-size: 16px;
+}
+
+p{
+    font-family: $primary_font;
+    font-size: 20px;
+}
+/*----------------------------------- */
+/*------------ header -------------- */
+
+header{
+    background-color: $primary_black;
+    height: 10vh;
+}
+
+.logo{
+    width: 150px;
+    float: right;
+}
+
+.navigation_link {
+
+}
+
+.fa-map-marker{
+    color: #74071e;
+}
+
+/* ---------------------------- hamburger menu----------------------- */
+
+#menu {
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    
+}
+.bar {
+    height: 5px;
+    width: 100%;
+    background-color: $primary_white;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#bar1 {
+    transform: translateY(-4px);
+}
+#bar3{
+    transform: translateY(4px);
+}
+
+.navigation_link{
+    list-style: none;
+    padding: 16px 0;
+}
+
+.nav_list {
+    padding: 0;
+    margin: 0 20px;
+    transition: 0.3 ease;
+    display: none;
+    font-family: $primary_font;
+    font-size: 20px;
+}
+
+.change .bar {
+    background-color:$primary_white;
+}
+.change #bar1{
+   transform: translateY(4px) rotate(-45deg); 
+}
+.change #bar3{
+    transform: translateY(-6px) rotate(45deg); 
+}
+.change #bar2 {
+    opacity: 0;
+}
+
+.change {
+    display: block;
+}
+
+
+
+
+/* --- mediaquery ipad og tablets ----- */
+@media screen and (min-width: 672px) and (max-width: 950px) {
+}
+
+
+/* ------ mediaquery desktop ---------- */
+@media screen and(min-width: 951px) {
+}
