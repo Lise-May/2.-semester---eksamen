@@ -15,8 +15,8 @@ $tone_darkgray: #414141;
 $tone_black: #000000;
 /*----------------------------------- */
 /*------------ fonts -------------- */
-$secondary_font:'Playfair Display', serif;
-$primary_font:'Abel', sans-serif;
+$secondary_font: "Playfair Display", serif;
+$primary_font: "Abel", sans-serif;
 /*----------------------------------- */
 /*------------ general -------------- */
 * {
@@ -31,66 +31,75 @@ h1 {
     font-size: 90px;
 }
 
-h2{
+h2 {
     font-family: $secondary_font;
     font-size: 50px;
 }
 
-h3{
+h3 {
     font-family: $secondary_font;
     font-size: 40px;
 }
 
-h4{
+h4 {
     font-family: $secondary_font;
     font-size: 30px;
 }
 
-h5{
+h5 {
     font-family: $secondary_font;
     font-size: 25px;
 }
 
-h6{
+h6 {
     font-family: $secondary_font;
     font-size: 16px;
 }
 
-p{
+p {
     font-family: $primary_font;
     font-size: 20px;
 }
 /*----------------------------------- */
 /*------------ header -------------- */
 
-header{
+header {
     background-color: $primary_black;
     height: 10vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
 }
 
-.logo{
-    width: 150px;
+nav {
+    background-color: $primary_black;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+}
+
+.logo {
+    width: 120px;
     float: right;
 }
 
-.navigation_link {
-
-}
-
-.fa-map-marker{
-    color: #74071e;
+.fa-map-marker {
+    color: $primary_white;
 }
 
 /* ---------------------------- hamburger menu----------------------- */
 
 #menu {
-    width: 35px;
+    width: 30px;
     height: 30px;
     cursor: pointer;
-    
+    margin-top: 20px;
 }
 .bar {
-    height: 5px;
+    height: 3px;
     width: 100%;
     background-color: $primary_white;
     display: block;
@@ -101,18 +110,26 @@ header{
 #bar1 {
     transform: translateY(-4px);
 }
-#bar3{
+#bar3 {
     transform: translateY(4px);
 }
 
-.navigation_link{
+.navigation_link {
     list-style: none;
-    padding: 16px 0;
+    padding: 12px 0;
+    color: $primary_white;
+    font-size: 20px;
+}
+
+.last_child {
+    border: 1px solid $primary_red;
+    padding: 5px;
+    width: fit-content;
 }
 
 .nav_list {
     padding: 0;
-    margin: 0 20px;
+    margin: 0 15px 20px;
     transition: 0.3 ease;
     display: none;
     font-family: $primary_font;
@@ -120,13 +137,13 @@ header{
 }
 
 .change .bar {
-    background-color:$primary_white;
+    background-color: $primary_white;
 }
-.change #bar1{
-   transform: translateY(4px) rotate(-45deg); 
+.change #bar1 {
+    transform: translateY(4px) rotate(-45deg);
 }
-.change #bar3{
-    transform: translateY(-6px) rotate(45deg); 
+.change #bar3 {
+    transform: translateY(-2px) rotate(45deg);
 }
 .change #bar2 {
     opacity: 0;
@@ -136,13 +153,9 @@ header{
     display: block;
 }
 
-
-
-
 /* --- mediaquery ipad og tablets ----- */
 @media screen and (min-width: 672px) and (max-width: 950px) {
 }
-
 
 /* ------ mediaquery desktop ---------- */
 @media screen and(min-width: 951px) {

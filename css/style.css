@@ -53,26 +53,49 @@ p {
 header {
   background-color: #252525;
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+}
+
+nav {
+  background-color: #252525;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
 }
 
 .logo {
-  width: 150px;
+  width: 120px;
   float: right;
 }
 
 .fa-map-marker {
-  color: #74071e;
+  color: #ffffff;
 }
 
 /* ---------------------------- hamburger menu----------------------- */
 #menu {
-  width: 35px;
+  width: 30px;
   height: 30px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .bar {
-  height: 5px;
+  height: 3px;
   width: 100%;
   background-color: #ffffff;
   display: block;
@@ -93,12 +116,22 @@ header {
 
 .navigation_link {
   list-style: none;
-  padding: 16px 0;
+  padding: 12px 0;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.last_child {
+  border: 1px solid #af0404;
+  padding: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .nav_list {
   padding: 0;
-  margin: 0 20px;
+  margin: 0 15px 20px;
   -webkit-transition: 0.3 ease;
   transition: 0.3 ease;
   display: none;
@@ -116,8 +149,8 @@ header {
 }
 
 .change #bar3 {
-  -webkit-transform: translateY(-6px) rotate(45deg);
-          transform: translateY(-6px) rotate(45deg);
+  -webkit-transform: translateY(-2px) rotate(45deg);
+          transform: translateY(-2px) rotate(45deg);
 }
 
 .change #bar2 {
