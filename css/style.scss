@@ -23,42 +23,77 @@ $primary_font: "Abel", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 h1 {
     font-family: $secondary_font;
     font-weight: 700;
-    font-size: 90px;
+    font-size: 45px;
 }
 
 h2 {
     font-family: $secondary_font;
-    font-size: 50px;
+    font-size: 25px;
+    font-weight: 100;
 }
-
 h3 {
     font-family: $secondary_font;
-    font-size: 40px;
+    font-size: 20px;
+    font-weight: 100;
 }
 
 h4 {
     font-family: $secondary_font;
-    font-size: 30px;
+    font-size: 15px;
+    font-weight: 100;
 }
 
 h5 {
     font-family: $secondary_font;
-    font-size: 25px;
+    font-size: 12px;
+    font-weight: 100;
 }
 
 h6 {
     font-family: $secondary_font;
-    font-size: 16px;
+    font-size: 8px;
+    font-weight: 100;
 }
 
 p {
     font-family: $primary_font;
+    font-size: 14px;
+}
+
+.white_text {
+    color: $primary_white;
+}
+
+section {
+    padding: 20px 10%;
+}
+
+.line {
+    height: 2px;
+    background-color: $primary_gold;
+}
+
+button {
+    color: $primary_white;
+    cursor: pointer;
+    font-family: $primary_font;
     font-size: 20px;
+}
+
+.button_red {
+    background-color: $primary_red;
+    border: none;
+}
+
+.button_black {
+    background-color: $primary_black;
+    border: 1px solid $primary_white;
 }
 /*----------------------------------- */
 /*------------ header -------------- */
@@ -88,6 +123,7 @@ nav {
 
 .fa-map-marker {
     color: $primary_white;
+    padding-right: 4px;
 }
 
 /* ---------------------------- hamburger menu----------------------- */
@@ -116,15 +152,18 @@ nav {
 
 .navigation_link {
     list-style: none;
-    padding: 12px 0;
     color: $primary_white;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .last_child {
     border: 1px solid $primary_red;
     padding: 5px;
     width: fit-content;
+}
+
+.nav_list li {
+    padding: 12px 0;
 }
 
 .nav_list {
@@ -134,6 +173,19 @@ nav {
     display: none;
     font-family: $primary_font;
     font-size: 20px;
+    list-style-type: none;
+}
+
+.sub_nav {
+    display: none;
+    list-style-type: none;
+    background-color: $primary_black;
+}
+
+.open_menu {
+    color: $primary_white;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .change .bar {
@@ -153,10 +205,219 @@ nav {
     display: block;
 }
 
+/*----------------*/
+/*---- Footer ----*/
+
+footer {
+    background-color: $primary_black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_h2 {
+    margin: 5px 0 25px 0;
+}
+
+.copyright {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.icon_section {
+    display: flex;
+    flex-direction: row;
+}
+.icon {
+    height: 25px;
+    width: 25px;
+    fill: $primary_white;
+    stroke: $primary_white;
+}
+.icon_background {
+    background-color: $primary_red;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+}
+
+.icon_anchor {
+    height: 25px;
+}
+
 /* --- mediaquery ipad og tablets ----- */
 @media screen and (min-width: 672px) and (max-width: 950px) {
+    h1 {
+        font-size: 75px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    /*----- Header -----*/
+
+    .logo {
+        width: 180px;
+    }
+
+    #menu {
+        height: 45px;
+        width: 45px;
+    }
+
+    .bar {
+        height: 5px;
+    }
+
+    .change #bar1 {
+        transform: translateY(6px) rotate(-45deg);
+    }
+    .change #bar3 {
+        transform: translateY(-4px) rotate(45deg);
+    }
+
+    .navigation_link {
+        font-size: 18px;
+    }
+
+    /*---- Footer ----*/
+    .footer_h2 {
+        margin: 5px 0 25px 0;
+        font-size: 30px;
+    }
+
+    .copyright {
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .icon_section {
+        display: flex;
+        flex-direction: row;
+    }
+    .icon {
+        height: 20px;
+        width: 20px;
+        fill: $primary_white;
+        stroke: $primary_white;
+    }
+    .icon_background {
+        background-color: $primary_red;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 12px;
+    }
 }
 
 /* ------ mediaquery desktop ---------- */
 @media screen and(min-width: 951px) {
+    h1 {
+        font-family: $secondary_font;
+        font-weight: 700;
+        font-size: 90px;
+    }
+
+    h2 {
+        font-family: $secondary_font;
+        font-size: 50px;
+    }
+
+    h3 {
+        font-family: $secondary_font;
+        font-size: 40px;
+    }
+
+    h4 {
+        font-family: $secondary_font;
+        font-size: 30px;
+    }
+
+    h5 {
+        font-family: $secondary_font;
+        font-size: 25px;
+    }
+
+    h6 {
+        font-family: $secondary_font;
+        font-size: 16px;
+    }
+
+    p {
+        font-family: $primary_font;
+        font-size: 20px;
+    }
+
+    /*----- Header -----*/
+
+    header {
+        flex-direction: row;
+    }
+
+    nav {
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav_list {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+    }
+
+    .sub_nav {
+        position: absolute;
+        padding: 0 15px;
+    }
+
+    .navigation_link {
+        padding: 0;
+    }
+
+    .last_child {
+        padding: 5px 10px;
+    }
+
+    .logo {
+        width: 200px;
+        float: left;
+    }
+
+    #menu {
+        display: none;
+    }
 }

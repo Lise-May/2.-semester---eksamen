@@ -10,42 +10,78 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-decoration: none;
 }
 
 h1 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-size: 90px;
+  font-size: 45px;
 }
 
 h2 {
   font-family: "Playfair Display", serif;
-  font-size: 50px;
+  font-size: 25px;
+  font-weight: 100;
 }
 
 h3 {
   font-family: "Playfair Display", serif;
-  font-size: 40px;
+  font-size: 20px;
+  font-weight: 100;
 }
 
 h4 {
   font-family: "Playfair Display", serif;
-  font-size: 30px;
+  font-size: 15px;
+  font-weight: 100;
 }
 
 h5 {
   font-family: "Playfair Display", serif;
-  font-size: 25px;
+  font-size: 12px;
+  font-weight: 100;
 }
 
 h6 {
   font-family: "Playfair Display", serif;
-  font-size: 16px;
+  font-size: 8px;
+  font-weight: 100;
 }
 
 p {
   font-family: "Abel", sans-serif;
+  font-size: 14px;
+}
+
+.white_text {
+  color: #ffffff;
+}
+
+section {
+  padding: 20px 10%;
+}
+
+.line {
+  height: 2px;
+  background-color: #cda46b;
+}
+
+button {
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Abel", sans-serif;
   font-size: 20px;
+}
+
+.button_red {
+  background-color: #af0404;
+  border: none;
+}
+
+.button_black {
+  background-color: #252525;
+  border: 1px solid #ffffff;
 }
 
 /*----------------------------------- */
@@ -84,6 +120,7 @@ nav {
 
 .fa-map-marker {
   color: #ffffff;
+  padding-right: 4px;
 }
 
 /* ---------------------------- hamburger menu----------------------- */
@@ -116,9 +153,8 @@ nav {
 
 .navigation_link {
   list-style: none;
-  padding: 12px 0;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .last_child {
@@ -129,6 +165,10 @@ nav {
   width: fit-content;
 }
 
+.nav_list li {
+  padding: 12px 0;
+}
+
 .nav_list {
   padding: 0;
   margin: 0 15px 20px;
@@ -137,6 +177,19 @@ nav {
   display: none;
   font-family: "Abel", sans-serif;
   font-size: 20px;
+  list-style-type: none;
+}
+
+.sub_nav {
+  display: none;
+  list-style-type: none;
+  background-color: #252525;
+}
+
+.open_menu {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .change .bar {
@@ -161,6 +214,234 @@ nav {
   display: block;
 }
 
+/*----------------*/
+/*---- Footer ----*/
+footer {
+  background-color: #252525;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_h2 {
+  margin: 5px 0 25px 0;
+}
+
+.copyright {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.icon_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.icon_background {
+  background-color: #af0404;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 12px;
+}
+
+.icon_anchor {
+  height: 25px;
+}
+
 /* --- mediaquery ipad og tablets ----- */
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  h1 {
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 18px;
+  }
+  /*----- Header -----*/
+  .logo {
+    width: 180px;
+  }
+  #menu {
+    height: 45px;
+    width: 45px;
+  }
+  .bar {
+    height: 5px;
+  }
+  .change #bar1 {
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
+  }
+  .change #bar3 {
+    -webkit-transform: translateY(-4px) rotate(45deg);
+            transform: translateY(-4px) rotate(45deg);
+  }
+  .navigation_link {
+    font-size: 18px;
+  }
+  /*---- Footer ----*/
+  .footer_h2 {
+    margin: 5px 0 25px 0;
+    font-size: 30px;
+  }
+  .copyright {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .icon_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .icon {
+    height: 20px;
+    width: 20px;
+    fill: #ffffff;
+    stroke: #ffffff;
+  }
+  .icon_background {
+    background-color: #af0404;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 12px;
+  }
+}
+
 /* ------ mediaquery desktop ---------- */
+@media screen and (min-width: 951px) {
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 90px;
+  }
+  h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+  }
+  h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+  }
+  h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+  }
+  h5 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+  }
+  h6 {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+  }
+  p {
+    font-family: "Abel", sans-serif;
+    font-size: 20px;
+  }
+  /*----- Header -----*/
+  header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav {
+    width: 100%;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .nav_list {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  .sub_nav {
+    position: absolute;
+    padding: 0 15px;
+  }
+  .navigation_link {
+    padding: 0;
+  }
+  .last_child {
+    padding: 5px 10px;
+  }
+  .logo {
+    width: 200px;
+    float: left;
+  }
+  #menu {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
