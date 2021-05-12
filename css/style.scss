@@ -322,12 +322,7 @@ footer {
         display: flex;
         flex-direction: row;
     }
-    .icon {
-        height: 20px;
-        width: 20px;
-        fill: $primary_white;
-        stroke: $primary_white;
-    }
+
     .icon_background {
         background-color: $primary_red;
         height: 35px;

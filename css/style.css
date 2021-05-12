@@ -342,12 +342,6 @@ footer {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .icon {
-    height: 20px;
-    width: 20px;
-    fill: #ffffff;
-    stroke: #ffffff;
-  }
   .icon_background {
     background-color: #af0404;
     height: 35px;
