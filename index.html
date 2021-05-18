@@ -5,6 +5,7 @@
         <link rel="icon" href="" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script src="js/script.js" defer></script>
+
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="Draupnir" />
@@ -17,6 +18,12 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"
         ></script>
+        <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/jquery.youtube-background.min.js" defer></script>
         <link
             href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
             rel="stylesheet"
@@ -52,7 +59,7 @@
                     <li>
                         <a href="" class="navigation_link">Vejledning</a>
 
-                        <span class="open_menu">&#x21E9;</span>
+                        <span class="open_menu">&#x2193;</span>
                         <ul class="sub_nav">
                             <li>
                                 <a href="" class="navigation_link sub_nav_link">
@@ -86,7 +93,142 @@
                 </ul>
             </nav>
         </header>
-        <main></main>
+        <main>
+            <section class="hero_video_section">
+                <div class="content_wrapper">
+                    <h1 class="white_text">Draupnir Danmark</h1>
+                    <p class="white_text">
+                        Dansk distributør af Draupnir kvalitetsprodukter til
+                        islandske heste
+                    </p>
+                    <button class="hero_section_button button_red">
+                        Oplev Draupnir
+                    </button>
+                </div>
+                <div
+                    id="ytbg"
+                    data-youtube="https://www.youtube.com/watch?v=FcqN-NtCIUM"
+                ></div>
+            </section>
+            <section class="index_about_section">
+                <div class="grid-container">
+                    <div class="h2_area">
+                        <h2 class="white_text index_about_h2">Hvem er vi</h2>
+                    </div>
+                    <div class="line_area">
+                        <div class="line index_about_line"></div>
+                    </div>
+                    <div class="img_area">
+                        <img
+                            class="index_about_img"
+                            src="img/solveig_4.jpg"
+                            alt="heeeeeeest"
+                        />
+                    </div>
+                    <div class="p_area">
+                        <p class="white_text index_about_p">
+                            Draupnir Danmark er din danske distributør af
+                            produkter fra det norske brand Draupnir.<br /><br />
+                            Draupnir Danmark er ejet og drevet af Wibeke og
+                            Søren Madsen, Debelmose isheste. Draupnir Danmark
+                            fungerer primært som mellemled mellem danske
+                            forhandlere af Draupnir rideudstyr og virksomheden
+                            Draupnir Norge. Men Draupnir Danmark bestræber sig
+                            også på, at imødekomme dig som privatkunde, der
+                            gerne vil vide alt om Draupnir
+                        </p>
+                    </div>
+                    <div class="button_area">
+                        <button class="button_black index_about_button">
+                            Læs mere
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="index_product_section">
+                <h2 class="text_black">Se vores produktudvalg</h2>
+                <div class="line index_product_line"></div>
+                <div class="product_article_wrapper">
+                    <article class="product_article">
+                        <button class="link_button button_red">Se mere</button>
+                        <div class="layer"></div>
+                        <a class="product_link" href="#"
+                            ><img
+                                class="index_product_img"
+                                src="img/Draupnir SP fra venstre side.jpg"
+                                alt="sadel"
+                        /></a>
+                        <p class="index_product_p">Se vores sadler</p>
+                    </article>
+
+                    <article class="product_article">
+                        <button class="link_button button_red">Se mere</button>
+                        <div class="layer"></div>
+                        <a class="product_link" href="#"
+                            ><img
+                                class="index_product_img"
+                                src="img/Draupnir longeringsgjord.jpg"
+                                alt="øvrigt udstyr"
+                        /></a>
+                        <p class="index_product_p">Se øvrige produkter</p>
+                    </article>
+                </div>
+            </section>
+            <section class="index_guidance_section">
+                <h2 class="black_text">Har du brug for vejledning?</h2>
+                <div class="line index_guidance_line"></div>
+                <div class="guidance_article_wrapper">
+                    <article class="index_guidance_article">
+                        <img
+                            class="index_guidance_img"
+                            src="img/solveig_4.jpg"
+                            alt="hest"
+                        />
+                        <p class="index_guidance_p">
+                            Størrelsesguide til rytteren
+                        </p>
+                        <button class="button_red index_guidance_button">
+                            Læs mere
+                        </button>
+                    </article>
+                    <article class="index_guidance_article">
+                        <img
+                            class="index_guidance_img"
+                            src="img/solveig_4.jpg"
+                            alt="hest"
+                        />
+                        <p class="index_guidance_p">
+                            Vedligeholdelse af din sadel
+                        </p>
+                        <button class="button_red index_guidance_button">
+                            Læs mere
+                        </button>
+                    </article>
+                    <article class="index_guidance_article">
+                        <img
+                            class="index_guidance_img"
+                            src="img/solveig_4.jpg"
+                            alt="hest"
+                        />
+                        <p class="index_guidance_p">Omstopning og reperation</p>
+                        <button class="button_red index_guidance_button">
+                            Læs mere
+                        </button>
+                    </article>
+                    <article class="index_guidance_article">
+                        <img
+                            class="index_guidance_img"
+                            src="img/solveig_4.jpg"
+                            alt="hest"
+                        />
+                        <p class="index_guidance_p">Sadeltyper</p>
+                        <button class="button_red index_guidance_button">
+                            Læs mere
+                        </button>
+                    </article>
+                </div>
+            </section>
+        </main>
         <footer>
             <h2 class="footer_h2 white_text">Draupnir Danmark</h2>
             <p class="white_text">
