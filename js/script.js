@@ -12,20 +12,12 @@ $(document).ready(function () {
         }
     });
 
-    // Background video
-    // Mobile version
-    $("#ytbg").attr(
-        "data-youtube",
-        "https://www.youtube.com/watch?v=HAf7pap_KI4"
-    );
-    // Tablet + desktop version
+    // Index video src change
     if ($(window).width() > 671) {
-        $("#ytbg").attr(
-            "data-youtube",
-            "https://www.youtube.com/watch?v=ouzhYd0yY0Q"
-        );
+        $(".hero_video").attr("src", "video/draupnir_index_hero_desktop.mp4");
+    } else {
+        $(".hero_video").attr("src", "video/draupnir_index_hero_mobile.mp4");
     }
-    $("[data-youtube]").youtube_background();
 
     if ($(window).width() > 950) {
         $(".product_article").each(function () {
@@ -68,6 +60,34 @@ function onClickMenu() {
     document.querySelector(".nav_list").classList.toggle("change");
 }
 
+// To top btn
+function scrollToId() {
+    $(document).ready(function () {
+        $("a.scrollLink").click(function (event) {
+            event.preventDefault();
+            $("html, body").animate(
+                { scrollTop: $($(this).attr("href")).offset().top },
+                500
+            );
+        });
+    });
+    jQuery(document).ready(function () {
+        var offset = 220;
+        var duration = 500;
+        jQuery(window).scroll(function () {
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery(".scroll-to-top").fadeIn(duration);
+            } else {
+                jQuery(".scroll-to-top").fadeOut(duration);
+            }
+        });
+        jQuery(".scroll-to-top").click(function (event) {
+            event.preventDefault();
+            jQuery("html, body").animate({ scrollTop: 0 }, duration);
+            return false;
+        });
+    });
+}
 // Filter products
 filterSelection("all");
 function filterSelection(c) {

@@ -29,15 +29,16 @@ var troldkaer_popup = new mapboxgl.Popup({
         '<a href="mailto:stutteri.troldkaer@gmail.com">Mail: stutteri.troldkaer@gmail.com</a>'
 );
 
-var hyldahl_popup = new mapboxgl.Popup({
+var rytterstuen_popup = new mapboxgl.Popup({
     offset: 35,
     closeButton: false,
 }).setHTML(
-    '<h5 class="white_text map_h5">Hyldahl Rideudstyr</h5>' +
-        "<p><br>Juvrevej 81<br>6792 Rømø</p>" +
-        "<p><br>Tlf. +45 7468 7716</p>" +
-        '<br><a href="mailto:info@hyldahl.com">Mail: info@hyldahl.com</a><br>' +
-        '<br><a href="https://hyldahl.com/" target="_blank">www.hyldahl.com</a>'
+    '<h5 class="white_text map_h5">Rytterstuen</h5>' +
+        "<p><br>Ordrupvej 100A<br>2920 Charlottenlund</p>" +
+        "<p><br>Tlf. butik +45 3094 7730</p>" +
+        "<p><br>Tlf. +45 2877 7441</p>" +
+        '<br><a href="mailto:info@rytterstuen.com">Mail: info@rytterstuen.com</a><br>' +
+        '<br><a href="https://www.rytterstuen.com/" target="_blank">www.rytterstuen.com</a>'
 );
 
 var draumur_popup = new mapboxgl.Popup({
@@ -49,6 +50,17 @@ var draumur_popup = new mapboxgl.Popup({
         "<p><br>Tlf. +45 2924 9914</p>" +
         '<br><a href="mailto:bodil@draumur.dk">Mail: bodil@draumur.dk</a><br>' +
         '<br><a href="https://draumur.dk/" target="_blank">www.draumur.dk</a>'
+);
+
+var hreppur_popup = new mapboxgl.Popup({
+    offset: 35,
+    closeButton: false,
+}).setHTML(
+    '<h5 class="white_text map_h5">Hreppur</h5>' +
+        "<p><br>Gamle Aalborgvej 2<br>9632 Møldrup</p>" +
+        "<p><br>Tlf. +45 4248 4443</p>" +
+        '<br><a href="mailto:hreppur@hreppur.dk">Mail: hreppur@hreppur.dk</a><br>' +
+        '<br><a href="https://www.hreppur.dk/" target="_blank">www.hreppur.dk</a>'
 );
 
 //start draupnir
@@ -69,14 +81,14 @@ var troldkaer = new mapboxgl.Marker({
     .addTo(map);
 //sluttroldkaer
 
-//start hydahl
-var hyldahl = new mapboxgl.Marker({
+//start rytterstuen
+var rytterstuen = new mapboxgl.Marker({
     color: "#af0404",
 })
-    .setLngLat([8.556420796994049, 55.174507758655146])
-    .setPopup(hyldahl_popup)
+    .setLngLat([12.570825698424981, 55.76017594427974])
+    .setPopup(rytterstuen_popup)
     .addTo(map);
-//slut hydahl
+//slut rytterstuen
 
 //start draumur
 var draumur = new mapboxgl.Marker({
@@ -86,3 +98,12 @@ var draumur = new mapboxgl.Marker({
     .setPopup(draumur_popup)
     .addTo(map);
 //slut draumur
+
+//start hreppur
+var hreppur = new mapboxgl.Marker({
+    color: "#af0404",
+})
+    .setLngLat([9.495954098910858, 56.578007251125705])
+    .setPopup(hreppur_popup)
+    .addTo(map);
+//slut hreppur
